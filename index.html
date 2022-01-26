@@ -12,21 +12,19 @@
     <div class="jumbotron">
       <h1>Lets Play Pig Dice!</h1>
     </div>
-    <form id="player1">
-      <div class="form-group">
-        <label for="player1Name">Player 1 Name:</label>
-        <input required class="player1Name form-control" type="text">
-      </div>
-    </form>
-    <form id="player2">
-      <div class="form-group">
-        <label for="player2Name">Player 2 Name</label>
-          <input required class="player2Name form-control" type="text">
-      </div>
-    </form>
-    <button id="start" class="btn-dark">Start</button>
+      <form id="player">
+        <div class="form-group">
+          <label for="player1Name">Player 1 Name:</label>
+          <input class="player1Name" type="text" required/>
+        </div>
+        <div class="form-group">
+          <label for="player2Name">Player 2 Name</label>
+            <input class="player2Name"  type="text" required/>
+        </div>
+      <button type="button" class="btn-info btn" id="start">Start</button>
+      </form>
   </div>
-  <div class="player container">
+  <div class="player-container">
     <h2>Player 1: <span id="player1Name"></span></h2>
       <button id="player1Roll" class="btn-success btn">Roll</button>
       <button id="player1Hold" class="btn-success btn">hold</button>

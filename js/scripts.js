@@ -36,16 +36,36 @@ let rollDice = function() {
   return Math.floor(6*Math.random())+1;
 }
 
-let playerName1 = "";
-let playerName2 = "";
-
 Player.prototype.newGame = function() {
   this.roll = 0;
   this.tempScore = 0;
   this.totalScore = 0;
   this.playerName ="";
 }
+
+
+//UI logic
+let playerName1 = "";
+let playerName2 = "";
+
+
 let clearValues =function() {
   $(".player1Name").val("");
   $(".player2Name").val("");
 }
+
+$(document).ready(function(){
+    let player1 = new Player(true);
+    let player2 = new Player(false);
+
+  $("button#start").click( function()  {
+    // event.preventDefault;
+    player1.playerName = $(".player1Name").val();
+    player2.playerName = $(".player2Name").val();
+    $(".player-container").show();
+    $(".container").hide();
+    
+
+  
+  });
+});
