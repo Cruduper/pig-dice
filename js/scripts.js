@@ -16,8 +16,8 @@ Player.prototype.rollOne = function() {
 };
 
 Player.prototype.singleRoll = function()  {
-  this.roll = rollDice;
-  this.rollOne();
+  this.roll = rollDice();
+  rollOne();
 };
 
 Player.prototype.hold = function()  {
