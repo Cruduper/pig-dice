@@ -64,8 +64,12 @@ $(document).ready(function(){
     player2.playerName = $(".player2Name").val();
     $(".player-container").show();
     $(".container").hide();
-    
+     
+  });
 
-  
+  $("button#player1Roll").click(function(event){
+    player1.singleRoll();
+    $("#diceRoll1").text(player1.roll);
+    $("#roundTotal1").text(player1.tempScore);
   });
 });
