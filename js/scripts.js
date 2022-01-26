@@ -38,3 +38,14 @@ let rollDice = function() {
 
 let playerName1 = "";
 let playerName2 = "";
+
+Player.prototype.newGame = function() {
+  this.roll = 0;
+  this.tempScore = 0;
+  this.totalScore = 0;
+  this.playerName ="";
+}
+let clearValues =function() {
+  $(".player1Name").val("");
+  $(".player2Name").val("");
+}
